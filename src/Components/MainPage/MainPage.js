@@ -1,8 +1,10 @@
 import './MainPage.css';
-import video from './Assets/video.mp4';
 import photo from './Assets/equipment.jpg';
+import VideoComponent from './VideoComponent';
 
 function MainPage() {
+
+    const isMobile = window.innerWidth <= 820;
 
     return (
         <div>
@@ -17,11 +19,7 @@ function MainPage() {
             <div className='photoOnMain'>
                 <img src={photo} alt='photogym'/>
             </div>
-            <div className='videoContainer'>
-                <video autoPlay muted loop>
-                <source src={video} type="video/mp4" />
-                </video>
-            </div>
+            {isMobile ? null : <VideoComponent />}
         </div>
     )
 }
