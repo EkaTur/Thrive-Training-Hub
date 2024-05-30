@@ -45,6 +45,10 @@ function App() {
     return () => clearTimeout(hideLoader);
   }, []);
 
+  const handleLinkClick = () => {
+    setOpen(false);
+  }
+
   return (
     <div style={{ overflow: 'hidden' }}>
       {loader ? (<LoaderPage />) : (
@@ -56,12 +60,12 @@ function App() {
             <Name />
             <div className='NavContainer'>
               <nav className={`AppNav ${isOpen ? 'open' : ''}`}>
-                <NavLink className='linkNav' activeClassName="active"  to='/about'>Classes and Facilities</NavLink>
-                <NavLink className="linkNav" activeClassName="active" to='membership'>Memberships</NavLink>
-                <NavLink className='linkNav' activeClassName="active" to='/contacts'>Contacts</NavLink>
-                <NavLink className='linkNav' activeClassName="active" to='/analysis'>Nutrition Analysis</NavLink>
-                <NavLink className='linkNav' activeClassName="active" to='/market'>Our products</NavLink>
-                <NavLink className='linkNav' activeClassName="active" to='/encyclopedia'>Healthy encyclopedia</NavLink>
+                <NavLink className='linkNav' activeClassName="active" onClick={handleLinkClick}  to='/about'>Classes and Facilities</NavLink>
+                <NavLink className="linkNav" activeClassName="active" onClick={handleLinkClick} to='membership'>Memberships</NavLink>
+                <NavLink className='linkNav' activeClassName="active" onClick={handleLinkClick} to='/contacts'>Contacts</NavLink>
+                <NavLink className='linkNav' activeClassName="active" onClick={handleLinkClick} to='/analysis'>Nutrition Analysis</NavLink>
+                <NavLink className='linkNav' activeClassName="active" onClick={handleLinkClick} to='/market'>Our products</NavLink>
+                <NavLink className='linkNav' activeClassName="active" onClick={handleLinkClick} to='/encyclopedia'>Healthy encyclopedia</NavLink>
               </nav>
               <MenuButton isActive={isOpen} onClick={() => setOpen(!isOpen)} />
             </div>
