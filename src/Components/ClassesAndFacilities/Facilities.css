@@ -78,3 +78,34 @@
     box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.173);
 }
 
+@media all and (max-width: 1024px) {
+    video {
+        display: none;
+    }
+
+    .videoContainer {
+        display: none;
+    }
+
+}
+
+@media all and (max-width: 820px) {
+    video {
+        display: none;
+    }
+
+    .videoContainer {
+        display: none;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .videoContainer {
+        display: none;
+    }
+
+    video {
+        display: none;
+    }
+}
+
