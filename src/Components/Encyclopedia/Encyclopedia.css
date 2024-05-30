@@ -1,0 +1,90 @@
+.EncyclopediaBigContainer {
+    margin-top: 15px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.EncyclopediaFlexContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.EncyclopediaSmallContainer {
+    border: 2px solid white;
+    width: 540px;
+    margin: 10px;
+    padding: 15px;
+    text-align: left;
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.29);
+}
+
+.articleLink {
+    color: white;
+    text-decoration: none;
+}
+
+.clickPar {
+    text-decoration: underline;
+}
+
+.ArticleBigContainer {
+    margin-top: 30px;
+    margin-left: 100px;
+    width: 800px;
+}
+
+.articleHeader {
+    font-size: 25px;
+}
+
+.articleIntroPar {
+    font-size: 18px;
+}
+
+.articlePar {
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.articleButton {
+    font-family: "Oswald", sans-serif;
+    background-color: transparent;
+    padding: 15px;
+    color: white;
+    border: 2px solid white;
+    font-size: 18px;
+    
+}
+
+.articleButton:hover{
+    background-color: white;
+    color: black;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.29);
+}
+
+.articlePhoto {
+    width: 400px;
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.29);
+}
+
+@media all and (max-width: 1423px) {}
+
+@media all and (max-width: 820px) {
+    .ArticleBigContainer {
+        margin-left: 20px;
+        width: 700px;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .ArticleBigContainer {
+        margin-left: 10px;
+        width: 370px;
+    }
+
+    .articlePhoto {
+        width: 370px;
+    }
+}

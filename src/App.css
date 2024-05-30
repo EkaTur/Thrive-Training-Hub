@@ -1,38 +1,49 @@
-.App {
-  text-align: center;
+body {
+    background-color: black;
+    color: white;
+    font-family: "Oswald", sans-serif;
+    overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button:hover {
+    cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.AppNav{
+    background-color: rgba(0, 0, 0, 0.345);
+    padding: 15px;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.linkNav {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.486);
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 10px 40px 0px 30px;
+    padding: 10px;
+    border: 2px solid transparent;
+    transition: border 0.5s ease;
+    box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.29);;
 }
 
-.App-link {
-  color: #61dafb;
+.linkNav:hover {
+    color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.linkNav.active {
+    border: 2px solid white;
 }
+
+@media all and (max-width: 1423px) {
+
+}
+
+@media all and (max-width: 800px) {}
+
+@media all and (max-width: 500px) {}
+
+

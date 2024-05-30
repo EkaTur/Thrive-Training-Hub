@@ -1,0 +1,71 @@
+{/*import { useState } from "react";
+import { memberships } from "./memberships";
+import './Membership.css';
+
+function Membership() {
+
+    const [offers, setOffer] = useState(1);
+    const { price, icon, name, description, benefits } = memberships[offers];
+    
+    const previousOffer = () => {
+        setOffer((offer => {
+            offer--;
+            if (offer < 0) {
+                return memberships.length - 1;
+            }
+            return offer;
+        }))
+    }
+    
+    const nextOffer = () => {
+        setOffer((offer => {
+            offer++;
+            if (offer > memberships.length - 1) {
+                offer = 0;
+            }
+            return offer;
+        }))
+    }
+
+    return (
+        <div>
+            <div className="MembershipHeaderContainer">
+                <h2>OUR MEMBERSHIP</h2>
+            </div>
+            <div className="MembershipIntroContainer">
+                <h3>Choose the one that suits you and come to our fitness club to discuss all the details with the manager or immediately buy a membership.</h3>
+            </div>
+            <div className="FullDescriptionContainer">
+                <div className="DescriptionContainer">
+                    <div>
+                        <img className="membershipIcon" src={icon} alt="photoOfUs"/>
+                    </div>
+                    <div>
+                        <h2>{name}</h2>
+                    </div>
+                    <div>
+                        {description.map((item, id) => (
+                            <p className="membershipPar" key={id}>{item}</p>
+                        ))}
+                    </div>
+                    <div>
+                        <ul className="membershipList">
+                            {benefits.map((benefit, id) => (
+                                <li className="membershipItem" key={id}>{benefit}</li>
+                            ))}
+                        </ul>
+                    </div>
+                    <div>
+                        <p className="membershipPrice"><span>Price: </span> {price}</p>
+                    </div>
+                </div>
+                <div>
+                    <button className="membershipButton" onClick={previousOffer}>To another membership</button>
+                    <button className="membershipButton" onClick={nextOffer}>To another membership</button>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Membership;*/}

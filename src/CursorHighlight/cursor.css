@@ -1,0 +1,16 @@
+.cursor-highlight {
+    position: fixed;
+        width: 400px;
+        /* Увеличиваем размер */
+        height: 300px;
+        /* Увеличиваем размер */
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.118) 0%, rgba(255, 0, 0, 0.0) 70%);
+        pointer-events: none;
+        /* Чтобы элемент не блокировал клики мыши */
+        transform: translate(-50%, -50%);
+        /* Центрирование подсветки относительно курсора */
+        z-index: 9999;
+        /* Чтобы подсветка была поверх всех элементов */
+        transition: background 0.2s ease-out, width 0.2s ease-out, height 0.2s ease-out;
+}

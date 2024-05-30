@@ -1,0 +1,65 @@
+iframe {
+    width: 600px;
+    height: 450px;
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.556);
+}
+
+.ContactsHeaderContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+.HoursFlexContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.HoursSmallContainer {
+    text-align: center;
+    border: 2px solid white;
+    width: 300px;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.473);
+}
+
+.MapContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ContactsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ContactsSmallContainer {
+    text-align: center;
+    border: 2px solid white;
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.482);
+}
+
+.contactsLink {
+    text-decoration: none;
+    color: white;
+}
+
+@media all and (max-width: 1423px) {}
+
+@media all and (max-width: 800px) {}
+
+@media all and (max-width: 500px) {
+    iframe {
+        width: 350px;
+        height: 350px;
+    }
+}

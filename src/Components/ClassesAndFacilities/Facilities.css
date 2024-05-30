@@ -1,0 +1,80 @@
+.ClassesMainCOntainer{
+    margin: 10px;
+}
+
+.HeaderClassesContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    opacity: 0.8;
+}
+
+.classesIntro {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.ClassesFormContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.classesInput {
+    font-family: "Oswald", sans-serif;
+    padding: 15px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    width: 200px;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.classesInput:focus {
+    outline: none;
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.29);
+}
+
+.classesButton {
+    font-family: "Oswald", sans-serif;
+    background-color: transparent;
+    padding: 15px;
+    color: white;
+    border: 2px solid white;
+    font-size: 18px;
+}
+
+.classesButton:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.29);
+}
+
+.ClassesBigContainer {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.ClassesFlexContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.ClassesSmallContainer {
+    width: 600px;
+    border: 2px solid white;
+    margin-top: 10px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.441);
+}
+
+.facilityPhoto {
+    width: 300px;
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.173);
+}
+

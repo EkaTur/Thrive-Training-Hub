@@ -1,23 +1,83 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useEffect, useState } from "react";
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    NavLink
+} from "react-router-dom";
+import MainPage from './Components/MainPage/MainPage';
+import NutritionAnalysis from './Components/NutritionAnalysis/NutritionAnalysis';
+import Encyclopedia from './Components/Encyclopedia/Encyclopedia';
+import Article from './Components/Encyclopedia/Article';
+import ClassesAndFacilities from './Components/ClassesAndFacilities/ClassesAndFacilities';
+import Contacts from './Components/Contacts/Contacts';
+import Membership from './Components/Membership/Membership';
+import Market from './Components/Market/Market';
+import ProductCard from './Components/Market/Products/ProductCard';
+import Name from './Components/Name/Name';
+import CursorHighlight from './CursorHighlight/CursorHighlight';
+import LoaderPage from './Components/Loader/LoaderPage';
+import gsap from 'gsap';
+import { MenuButton } from './Components/MenuButton/MenuButton';
 
 function App() {
+
+  const [isOpen, setOpen] = useState();
+  
+  const appearLink = () => {
+    gsap.fromTo('.linkNav', { opacity: 0 }, { delay: 1, duration: 2, stagger: 0.5, opacity: 1 });
+  }
+
+  const [loader, setLoader] = useState(true);
+
+  useEffect(() => {
+    if (!loader) {
+      appearLink();
+    }
+  }, [loader]);
+
+  useEffect(() => {
+    const hideLoader = setTimeout(() => {
+      setLoader(false);
+    }, 1500);
+
+    return () => clearTimeout(hideLoader);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ overflow: 'hidden' }}>
+      {loader ? (<LoaderPage />) : (
+        <div>
+          <div>
+            <CursorHighlight />
+          </div>
+          <Router>
+            <Name />
+            <div className='NavContainer'>
+              <nav className={`AppNav ${isOpen ? 'open' : ''}`}>
+                <NavLink className='linkNav' activeClassName="active"  to='/about'>Classes and Facilities</NavLink>
+                <NavLink className="linkNav" activeClassName="active" to='membership'>Memberships</NavLink>
+                <NavLink className='linkNav' activeClassName="active" to='/contacts'>Contacts</NavLink>
+                <NavLink className='linkNav' activeClassName="active" to='/analysis'>Nutrition Analysis</NavLink>
+                <NavLink className='linkNav' activeClassName="active" to='/market'>Our products</NavLink>
+                <NavLink className='linkNav' activeClassName="active" to='/encyclopedia'>Healthy encyclopedia</NavLink>
+              </nav>
+              <MenuButton isActive={isOpen} onClick={() => setOpen(!isOpen)} />
+            </div>
+            <Routes>
+              <Route path="/" element={<MainPage />} />
+              <Route path="/about" element={<ClassesAndFacilities />} />
+              <Route path="/membership" element={<Membership />} />
+              <Route path="/contacts" element={<Contacts />} />
+              <Route path="/analysis" element={<NutritionAnalysis />} />
+              <Route path="/market" element={<Market />} />
+              <Route path="/encyclopedia" element={<Encyclopedia />} />
+              <Route path="/encyclopedia/:title" element={<Article />} />
+              <Route path="/market/:title" element={<ProductCard />} />
+            </Routes>
+          </Router>
+      </div>)}
     </div>
   );
 }

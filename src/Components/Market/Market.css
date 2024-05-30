@@ -1,0 +1,52 @@
+.MarketCategoriesContainer {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.MarketContainer {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.CartContainer {
+    width: 500px;
+    text-align: center;
+}
+
+.ProductsContainer {
+    width: 800px;
+}
+
+.basket {
+    width: 50px;
+}
+
+@media all and (max-width: 1423px) {
+    .CartContainer {
+        width: 350px;
+    }
+    
+    .ProductsContainer {
+        width: 500px;
+    }
+}
+
+@media all and (max-width: 820px) {
+    .CartContainer {
+        width: 250px;
+    }
+    .ProductsContainer {
+        width: 400px;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .CartContainer {
+        width: 170px;
+    }
+    
+    .ProductsContainer {
+        width: 180px;
+    }
+}
