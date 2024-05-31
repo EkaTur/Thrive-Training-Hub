@@ -35,14 +35,7 @@ function App() {
     if (!loader) {
       appearLink();
     }
-  }, [loader]);
-
-
-  useLayoutEffect(() => {
-    if (!loader && isOpen) {
-      appearLink(); 
-    }
-  }, [isOpen, loader]); 
+  }, [loader, isOpen]); 
 
   useEffect(() => {
     const hideLoader = setTimeout(() => {
