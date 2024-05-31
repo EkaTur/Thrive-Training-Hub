@@ -194,20 +194,31 @@
         }
     }
 
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+    
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
     .AppNav {
         display: none;
         opacity: 0;
-        transition: opacity 0.5s ease-in-out;
     }
-
+    
     .AppNav.open {
         display: block;
-        opacity: 1;
+        animation: fadeIn 0.5s ease forwards;
     }
 
     .linkNav {
         display: block;
         margin: 10px 0;
-        opacity: 0
+        transition: border 0.5s ease, opacity 1s ease;
     }
 }
