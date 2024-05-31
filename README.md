@@ -1,7 +1,7 @@
 # Fitness Club Website
 
 Welcome to the Fitness Club Website repository! This project is a web application for a fitness club, designed to provide information about classes, facilities, memberships, nutrition analysis, and more.
-![Screenshot](publick/gitpicture.jpg)
+![Screenshot](public/gitpicture.JPG)
 ## Live Demo
 
 You can check out the live version of this website [here](https://thrive-training-hub.netlify.app/).
