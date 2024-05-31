@@ -64,7 +64,6 @@ video {
         top: 0px;
         overflow: hidden;
         height: 1360px;
-        z-index: -100;
     }
 
     .photo{
