@@ -23,10 +23,10 @@ import { MenuButton } from './Components/MenuButton/MenuButton';
 
 function App() {
 
-  const [isOpen, setOpen] = useState();
+  const [isOpen, setOpen] = useState(false);
   
   const appearLink = () => {
-    gsap.fromTo('.linkNav', { opacity: 0 }, { delay: 1, duration: 2, stagger: 0.5, opacity: 1 });
+    gsap.fromTo('.linkNav', { opacity: 0 }, { delay: 0.5, duration: 1, stagger: 0.5, opacity: 0.6 });
   }
 
   const [loader, setLoader] = useState(true);
@@ -35,7 +35,7 @@ function App() {
     if (!loader) {
       appearLink();
     }
-  }, [loader]);
+  }, [loader, isOpen]); 
 
   useEffect(() => {
     const hideLoader = setTimeout(() => {

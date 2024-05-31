@@ -1,10 +1,16 @@
 import './MainPage.css';
-import photo from './Assets/equipment.jpg';
+import photo from './Assets/gymphoto.jpg';
 import VideoComponent from './VideoComponent';
+import gsap from 'gsap';
+import { useLayoutEffect } from 'react';
 
 function MainPage() {
 
     const isMobile = window.innerWidth <= 820;
+
+    useLayoutEffect(() => {
+        gsap.fromTo('.photoOnMain', {opacity: 0}, {opacity: 0.3, duration: 2})
+    }, [])
 
     return (
         <div>
@@ -17,7 +23,7 @@ function MainPage() {
                 </div>
             </div>
             <div className='photoOnMain'>
-                <img src={photo} alt='photogym'/>
+                <img className='photo' src={photo} alt='photogym'/>
             </div>
             {isMobile ? null : <VideoComponent />}
         </div>

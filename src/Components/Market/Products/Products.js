@@ -9,7 +9,7 @@ function Products() {
     const selectedCategory = useSelector(getSelectedCategory);
 
     return (
-        <div>
+        <div className="allProducts">
             {
                 productsData.filter(product => {
                     if (selectedCategory === 'ALL') return true;

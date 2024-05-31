@@ -24,7 +24,7 @@ function Cart() {
             Swal.fire({
                 icon: "error",
                 title: "Oops...",
-                text: "Something went wrong, try again later!",
+                text: "Payment functionality is temporarily unavailable. Sorry!",
                 confirmButtonText: 'OK',
                 customClass: {
                     popup: 'my-popup-class',

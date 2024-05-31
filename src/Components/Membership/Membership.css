@@ -56,8 +56,6 @@
     margin-top: -50px;
 }
 
-@media all and (max-width: 1423px) {}
-
 @media all and (max-width: 800px) {
     .carousel-div {
         height: 620px;

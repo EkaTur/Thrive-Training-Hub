@@ -53,10 +53,6 @@ iframe {
     color: white;
 }
 
-@media all and (max-width: 1423px) {}
-
-@media all and (max-width: 800px) {}
-
 @media all and (max-width: 500px) {
     iframe {
         width: 350px;
