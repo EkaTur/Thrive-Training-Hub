@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import {
     BrowserRouter as Router,
     Routes,
@@ -31,11 +31,18 @@ function App() {
 
   const [loader, setLoader] = useState(true);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!loader) {
       appearLink();
     }
-  }, [loader, isOpen]); 
+  }, [loader]);
+
+
+  useLayoutEffect(() => {
+    if (!loader && isOpen) {
+      appearLink(); 
+    }
+  }, [isOpen, loader]); 
 
   useEffect(() => {
     const hideLoader = setTimeout(() => {
