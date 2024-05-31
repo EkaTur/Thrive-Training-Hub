@@ -26,7 +26,7 @@ function App() {
   const [isOpen, setOpen] = useState(false);
   
   const appearLink = () => {
-    gsap.fromTo('.linkNav', { opacity: 0 }, { delay: 0.5, duration: 1, stagger: 0.5, opacity: 0.6 });
+    gsap.fromTo('.linkNav', { opacity: 0 }, { delay: 0.5, duration: 1, stagger: 0.5, opacity: 0.6, ease: "power2.out" });
   }
 
   const [loader, setLoader] = useState(true);
