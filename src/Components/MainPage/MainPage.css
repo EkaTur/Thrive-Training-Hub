@@ -60,7 +60,7 @@ video {
     .photoOnMain {
         display: block;
         position: absolute;
-        opacity: 0.3;
+        opacity: 0.5;
         top: 0px;
         overflow: hidden;
         height: 1360px;
