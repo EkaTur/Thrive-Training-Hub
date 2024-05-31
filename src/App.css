@@ -19,7 +19,6 @@ button:hover {
 
 .linkNav {
     text-decoration: none;
-    opacity: 0.6;
     color: white;
     text-transform: uppercase;
     font-size: 20px;
@@ -27,7 +26,8 @@ button:hover {
     padding: 10px;
     border: 2px solid transparent;
     transition: border 0.5s ease;
-    box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.29);;
+    box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.29);
+    opacity: 0;
 }
 
 .linkNav:hover {
