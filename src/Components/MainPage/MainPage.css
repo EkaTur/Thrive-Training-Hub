@@ -110,6 +110,8 @@ video {
     .photoOnMain {
         position: static;
         height: 669px;
+        z-index: 1;
+        opacity: 0.6;
     }
 
 }
